@@ -1,0 +1,13 @@
+﻿using libMotdePasse;
+Console.WriteLine("Saisissez votre login");
+string login = Console.ReadLine();
+Console.WriteLine("Saisissez votre mot de passe");
+string mdp = Console.ReadLine();
+MotdePasse modp = new MotdePasse(login, mdp);
+Console.WriteLine("Ressaisissez votre mot de passe");
+string verif = Console.ReadLine();
+Console.WriteLine(modp.Verifier(verif));
+Console.WriteLine(modp.Longueur());
+Console.WriteLine(modp.EstNumeric());
+Console.WriteLine(modp.EstMajuscule());
+Console.WriteLine(modp.EstSpecial());
